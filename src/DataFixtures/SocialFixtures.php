@@ -12,25 +12,25 @@ class SocialFixtures extends Fixture
         [
             'name' => 'github',
             'url' => 'https://github.com/bouboumael',
-            'icon' => 'faGithub',
+            'icon' => 'fab fa-github',
             'isActive' => true,
         ],
         [
             'name' => 'Linkedin',
             'url' => 'https://www.linkedin.com/in/ma%C3%ABl-chariault/',
-            'icon' => 'faLinkedin',
+            'icon' => 'fab fa-linkedin',
             'isActive' => true,
         ],
         [
             'name' => 'Facebook',
             'url' => 'https://www.facebook.com/bouboumael',
-            'icon' => 'faFacebook',
+            'icon' => 'fab fa-facebook',
             'isActive' => true,
         ],
         [
             'name' => 'Twitter',
             'url' => 'https://twitter.com/djboubou45',
-            'icon' => 'faTwitter',
+            'icon' => 'fab fa-twitter',
             'isActive' => true,
         ]
     ];
