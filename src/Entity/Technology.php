@@ -7,7 +7,10 @@ use App\Repository\TechnologyRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: TechnologyRepository::class)]
-#[ApiResource]
+#[ApiResource(
+    collectionOperations: ['get'],
+    itemOperations: ['get'],
+)]
 class Technology
 {
     #[ORM\Id]
