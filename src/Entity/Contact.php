@@ -23,17 +23,25 @@ class Contact
     #[ORM\Column(type: 'string', length: 255)]
     #[
         Assert\notBlank,
-        Assert\length(
-            min: 10,
+        Assert\Length(
+            min: 2,
             max: 255,
-            minMessage: "Le nom doit faire au moins {{ limit }} caractères.",
-            maxMessage: "Le nom ne peut pas faire plus de {{ limit }} caractères."
+            minMessage: "Le prénom doit faire au moins {{ limit }} caractères.",
+            maxMessage: "Le prénom ne peut pas faire plus de {{ limit }} caractères."
         )
     ]
     private string $firstname;
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[Assert\notBlank]
+    #[
+        Assert\notBlank,
+        Assert\Length(
+            min: 2,
+            max: 255,
+            minMessage: "Le nom doit faire au moins {{ limit }} caractères.",
+            maxMessage: "Le nom ne peut pas faire plus de {{ limit }} caractères."
+        )
+    ]
     private string $lastname;
 
     #[ORM\Column(type: 'string', length: 255)]
@@ -49,11 +57,27 @@ class Contact
     private ?string $phone;
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[Assert\notBlank]
+    #[
+        Assert\notBlank,
+        Assert\Length(
+            min: 2,
+            max: 255,
+            minMessage: "Le sujet doit faire au moins {{ limit }} caractères.",
+            maxMessage: "Le sujet ne peut pas faire plus de {{ limit }} caractères."
+        )
+    ]
     private string $subject;
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[Assert\notBlank]
+    #[
+        Assert\notBlank,
+        Assert\Length(
+            min: 10,
+            max: 255,
+            minMessage: "Le message doit faire au moins {{ limit }} caractères.",
+            maxMessage: "Le message ne peut pas faire plus de {{ limit }} caractères."
+        )
+    ]
     private string $message;
 
     #[ORM\Column(type: 'datetime_immutable')]
